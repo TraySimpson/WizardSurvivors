@@ -4,5 +4,12 @@
 
 [node name="Main" type="Node"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 657.0
+offset_top = 405.0
+offset_right = 697.0
+offset_bottom = 445.0
+
 [node name="Player" parent="." instance=ExtResource("1_8p14u")]
 position = Vector2(960, 540)
+player_speed = 150
