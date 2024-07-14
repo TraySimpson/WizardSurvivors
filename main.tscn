@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ch25l711gsqe"]
+[gd_scene load_steps=3 format=3 uid="uid://ch25l711gsqe"]
 
 [ext_resource type="PackedScene" uid="uid://cehhat6c7ev31" path="res://player.tscn" id="1_8p14u"]
+[ext_resource type="PackedScene" uid="uid://xcvgu0fvf65o" path="res://goblin.tscn" id="2_we241"]
 
 [node name="Main" type="Node"]
 
@@ -13,3 +14,6 @@ offset_bottom = 445.0
 [node name="Player" parent="." instance=ExtResource("1_8p14u")]
 position = Vector2(960, 540)
 player_speed = 150
+
+[node name="Goblin" parent="." instance=ExtResource("2_we241")]
+position = Vector2(1273, 371)
