@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch25l711gsqe"]
+[gd_scene load_steps=5 format=3 uid="uid://ch25l711gsqe"]
 
 [ext_resource type="PackedScene" uid="uid://cehhat6c7ev31" path="res://player.tscn" id="1_8p14u"]
 [ext_resource type="Script" path="res://main.gd" id="1_ydouk"]
 [ext_resource type="PackedScene" uid="uid://xcvgu0fvf65o" path="res://goblin.tscn" id="2_we241"]
+
+[sub_resource type="Curve2D" id="Curve2D_2yufk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -65, -80, 0, 0, 0, 0, 2006, -83, 0, 0, 0, 0, 2006, 1160, 0, 0, 0, 0, -68, 1157, 0, 0, 0, 0, -65, -80)
+}
+point_count = 5
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ydouk")
@@ -22,5 +28,13 @@ player_speed = 150
 position = Vector2(1273, 371)
 
 [node name="GoblinSpawnCooldown" type="Timer" parent="."]
+autostart = true
+
+[node name="GoblinSpawns" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2yufk")
+
+[node name="GoblinSpawnPos" type="PathFollow2D" parent="GoblinSpawns"]
+position = Vector2(-65, -80)
+rotation = -0.00144857
 
 [connection signal="timeout" from="GoblinSpawnCooldown" to="." method="_on_goblin_spawn_cooldown_timeout"]
