@@ -53,7 +53,7 @@ max_health = 100
 
 [node name="BoltSpawner" parent="." instance=ExtResource("4_rlftv")]
 position = Vector2(0, 47.72)
-cooldown_time = 30
+bolt_count = 3
 
 [connection signal="died" from="Health" to="." method="_on_health_died"]
 [connection signal="bolt_spawned" from="BoltSpawner" to="." method="_on_bolt_spawner_bolt_spawned"]

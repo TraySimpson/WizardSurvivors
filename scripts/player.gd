@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 @export var player_speed: int = 1
+@export var bullet_spread: float = 5.0
 var velocity: Vector2 = Vector2.ZERO
 
 
@@ -35,7 +36,7 @@ func _on_bolt_spawner_bolt_spawned(bolt: BoltAttack, index: int):
 func _offsetByIndex(bolt: BoltAttack, index: int):
 	if (index == 0):
 		return
-	var angle_increment = 5.0 * ((index + 1) / 2) * (1 if index % 2 == 1 else -1)
+	var angle_increment = bullet_spread * ((index + 1) / 2) * (1 if index % 2 == 1 else -1)
 	var angle_radians = deg_to_rad(angle_increment)
 	var rotated_direction = bolt.direction.rotated(angle_radians)
 	bolt.direction = rotated_direction.normalized()
