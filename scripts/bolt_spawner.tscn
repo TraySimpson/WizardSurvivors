@@ -6,6 +6,7 @@
 [node name="BoltSpawner" type="Node2D"]
 script = ExtResource("1_55nxu")
 bolt_attack_prefab = ExtResource("2_hcc54")
+bolt_count = 5
 
 [node name="CooldownTimer" type="Timer" parent="."]
 autostart = true

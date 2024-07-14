@@ -23,8 +23,18 @@ func _physics_process(delta):
 	position += velocity
 
 
-func _on_bolt_spawner_bolt_spawned(bolt: BoltAttack):
+func _on_bolt_spawner_bolt_spawned(bolt: BoltAttack, index: int):
+	print("Spawned bolt: " + str(index))
 	if (velocity.is_zero_approx()):
 		bolt.direction = Vector2(-1, 0) if animated_sprite.flip_h else Vector2(1, 0)
+		_offsetByIndex(bolt, index)
 		return
 	bolt.direction = velocity.normalized()
+	_offsetByIndex(bolt, index)
+	
+	
+func _offsetByIndex(bolt: BoltAttack, index: int):
+	if (index == 0):
+		return
+	#var perpendicular: Vector2 = Vector2(-bolt.direction.x, bolt.direction.y) if bool(index % 2) else Vector2(bolt.direction.x, -bolt.direction.y)
+	bolt.direction = Vector2(randi(), randi()).normalized()
