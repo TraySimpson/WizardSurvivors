@@ -1,3 +1,4 @@
+class_name BoltAttack
 extends Area2D
 
 

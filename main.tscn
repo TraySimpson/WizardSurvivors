@@ -6,6 +6,7 @@
 [node name="Main" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
 offset_left = 657.0
 offset_top = 405.0
 offset_right = 697.0
