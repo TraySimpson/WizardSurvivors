@@ -39,3 +39,8 @@ func _offsetByIndex(bolt: BoltAttack, index: int):
 	var angle_radians = deg_to_rad(angle_increment)
 	var rotated_direction = bolt.direction.rotated(angle_radians)
 	bolt.direction = rotated_direction.normalized()
+
+
+func _on_health_died():
+	print("You lose!")
+	get_tree().reload_current_scene()
