@@ -21,7 +21,6 @@ func takeDamage(damage: int) -> void:
 	health_changed.emit(-damage)
 	if current_health <= 0:
 		died.emit()
-		owner.queue_free()
 	updateHealthBar()
 		
 func healHealth(heal_points: int) -> void:

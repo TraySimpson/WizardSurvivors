@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://xcvgu0fvf65o"]
+[gd_scene load_steps=8 format=3 uid="uid://xcvgu0fvf65o"]
 
+[ext_resource type="Script" path="res://scripts/goblin.gd" id="1_1bqq5"]
 [ext_resource type="Texture2D" uid="uid://d0h5rji3guaa1" path="res://graphics/Goblin2.png" id="1_gy37u"]
 [ext_resource type="PackedScene" uid="uid://4wpfsol88co8" path="res://health.tscn" id="2_4us8b"]
 
@@ -32,6 +33,7 @@ height = 36.0
 [node name="Goblin" type="Area2D"]
 collision_layer = 4
 collision_mask = 3
+script = ExtResource("1_1bqq5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
@@ -46,3 +48,5 @@ shape = SubResource("CapsuleShape2D_rxk74")
 position = Vector2(0, 30)
 scale = Vector2(0.4, 1)
 max_health = 20
+
+[connection signal="died" from="Health" to="." method="_on_health_died"]
