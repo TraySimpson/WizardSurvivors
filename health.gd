@@ -5,17 +5,17 @@ signal health_changed(int)
 signal died
 
 @export var max_health: int
-@onready var health_bar = $HealthBar
-@onready var health_bar_value = $HealthBar/HealthBarValue
+@onready var health_bar: ProgressBar = $HealthBar
 var current_health: int
 
 
 func _ready():
 	current_health = max_health
+	health_bar.max_value = max_health
+	updateHealthBar()
 	health_bar.hide()
 
 func takeDamage(damage: int) -> void:
-	print("Taking damage!")
 	current_health -= damage
 	health_changed.emit(-damage)
 	if current_health <= 0:
@@ -29,13 +29,16 @@ func healHealth(heal_points: int) -> void:
 
 func updateHealthBar() -> void:
 	var ratio = float(current_health) / float(max_health)
+	var color = Color.LIME_GREEN
 	match(true):
 		true when ratio > .5:
-			health_bar_value.color = Color.LIME_GREEN
+			color = Color.LIME_GREEN
 		true when ratio > .2:
-			health_bar_value.color = Color.YELLOW
+			color = Color.YELLOW
 		true when current_health > 0:
-			health_bar_value.color = Color.DARK_RED
+			color = Color.CRIMSON
 		_ :
-			health_bar_value.color = Color.BLACK
+			color = Color.BLACK
+	health_bar.get("theme_override_styles/fill").bg_color = color
+	health_bar.value = current_health
 	health_bar.show()
