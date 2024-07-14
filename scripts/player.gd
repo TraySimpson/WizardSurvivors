@@ -24,7 +24,6 @@ func _physics_process(delta):
 
 
 func _on_bolt_spawner_bolt_spawned(bolt: BoltAttack, index: int):
-	print("Spawned bolt: " + str(index))
 	if (velocity.is_zero_approx()):
 		bolt.direction = Vector2(-1, 0) if animated_sprite.flip_h else Vector2(1, 0)
 		_offsetByIndex(bolt, index)
@@ -36,5 +35,7 @@ func _on_bolt_spawner_bolt_spawned(bolt: BoltAttack, index: int):
 func _offsetByIndex(bolt: BoltAttack, index: int):
 	if (index == 0):
 		return
-	#var perpendicular: Vector2 = Vector2(-bolt.direction.x, bolt.direction.y) if bool(index % 2) else Vector2(bolt.direction.x, -bolt.direction.y)
-	bolt.direction = Vector2(randi(), randi()).normalized()
+	var angle_increment = 5.0 * ((index + 1) / 2) * (1 if index % 2 == 1 else -1)
+	var angle_radians = deg_to_rad(angle_increment)
+	var rotated_direction = bolt.direction.rotated(angle_radians)
+	bolt.direction = rotated_direction.normalized()

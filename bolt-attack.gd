@@ -11,7 +11,6 @@ func _physics_process(delta):
 	position += delta * bullet_speed * direction
 
 func _on_body_entered(body):
-	print("Bolt collided!")
 	for child in body.get_children():
 		if child is Health:
 			child.takeDamage(impact_damage)
