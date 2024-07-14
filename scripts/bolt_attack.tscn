@@ -46,18 +46,22 @@ radius = 16.0312
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("1_tjgsb")
+impact_damage = 5
+bullet_speed = 500
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_wnud0")
 autoplay = "default"
-frame_progress = 0.625281
+frame_progress = 0.419399
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_iitvd")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
+[connection signal="area_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

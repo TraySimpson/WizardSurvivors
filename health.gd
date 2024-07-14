@@ -29,6 +29,7 @@ func healHealth(heal_points: int) -> void:
 	updateHealthBar()
 
 func updateHealthBar() -> void:
+	$Timer.stop()
 	var ratio = float(current_health) / float(max_health)
 	var color = Color.LIME_GREEN
 	match(true):
@@ -43,3 +44,11 @@ func updateHealthBar() -> void:
 	health_bar.get("theme_override_styles/fill").bg_color = color
 	health_bar.value = current_health
 	health_bar.show()
+	if (current_health == max_health):
+		$Timer.wait_time = 1
+		$Timer.start()
+	
+
+
+func _on_timer_timeout():
+	health_bar.hide()

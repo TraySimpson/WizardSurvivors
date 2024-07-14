@@ -51,3 +51,5 @@ position = Vector2(0, 58.565)
 max_health = 100
 
 [node name="BoltSpawner" parent="." instance=ExtResource("4_rlftv")]
+
+[connection signal="bolt_spawned" from="BoltSpawner" to="." method="_on_bolt_spawner_bolt_spawned"]
