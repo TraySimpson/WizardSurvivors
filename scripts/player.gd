@@ -5,6 +5,11 @@ extends Area2D
 
 
 
+func _process(delta):
+	if (Input.is_action_just_pressed("test")):
+		print("Hit test")
+		$Health.takeDamage(10)
+
 func _physics_process(delta):
 
 	var velocity = Vector2(
