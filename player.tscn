@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cehhat6c7ev31"]
+[gd_scene load_steps=9 format=3 uid="uid://cehhat6c7ev31"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7gwym"]
 [ext_resource type="Texture2D" uid="uid://xhvl2px57hx0" path="res://graphics/Wizard.png" id="1_tvxa1"]
 [ext_resource type="PackedScene" uid="uid://4wpfsol88co8" path="res://health.tscn" id="3_ayyj0"]
+[ext_resource type="PackedScene" uid="uid://bdj32gv8kpwpu" path="res://scripts/bolt_spawner.tscn" id="4_rlftv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wxt5e"]
 atlas = ExtResource("1_tvxa1")
@@ -31,6 +32,7 @@ radius = 15.0
 height = 48.0
 
 [node name="Player" type="Area2D"]
+collision_mask = 12
 script = ExtResource("1_7gwym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -47,3 +49,5 @@ shape = SubResource("CapsuleShape2D_5dtkj")
 [node name="Health" parent="." instance=ExtResource("3_ayyj0")]
 position = Vector2(0, 58.565)
 max_health = 100
+
+[node name="BoltSpawner" parent="." instance=ExtResource("4_rlftv")]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdj32gv8kpwpu"]
+
+[ext_resource type="Script" path="res://BoltSpawner.gd" id="1_55nxu"]
+[ext_resource type="PackedScene" uid="uid://cbb5hyaentdth" path="res://scripts/bolt_attack.tscn" id="2_hcc54"]
+
+[node name="BoltSpawner" type="Node2D"]
+script = ExtResource("1_55nxu")
+bolt_attack_prefab = ExtResource("2_hcc54")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

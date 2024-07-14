@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://xcvgu0fvf65o"]
+[gd_scene load_steps=7 format=3 uid="uid://xcvgu0fvf65o"]
 
 [ext_resource type="Texture2D" uid="uid://d0h5rji3guaa1" path="res://graphics/Goblin2.png" id="1_gy37u"]
+[ext_resource type="PackedScene" uid="uid://4wpfsol88co8" path="res://health.tscn" id="2_4us8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_75kga"]
 atlas = ExtResource("1_gy37u")
@@ -29,6 +30,8 @@ radius = 12.0
 height = 36.0
 
 [node name="Goblin" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
@@ -38,3 +41,8 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_rxk74")
+
+[node name="Health" parent="." instance=ExtResource("2_4us8b")]
+position = Vector2(0, 30)
+scale = Vector2(0.4, 1)
+max_health = 20
