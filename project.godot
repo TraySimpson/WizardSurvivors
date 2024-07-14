@@ -54,6 +54,7 @@ test={
 2d_physics/layer_2="player attacks"
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="enemy attacks"
+2d_physics/layer_5="xp"
 
 [rendering]
 

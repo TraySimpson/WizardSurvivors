@@ -49,4 +49,9 @@ position = Vector2(0, 30)
 scale = Vector2(0.4, 1)
 max_health = 20
 
+[node name="AttackCooldown" type="Timer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="died" from="Health" to="." method="_on_health_died"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
