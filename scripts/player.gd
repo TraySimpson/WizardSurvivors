@@ -6,10 +6,6 @@ extends Area2D
 var velocity: Vector2 = Vector2.ZERO
 
 
-func _process(delta):
-	if (Input.is_action_just_pressed("test")):
-		$Health.takeDamage(10)
-
 
 func _physics_process(delta):
 	velocity = Vector2(
@@ -43,5 +39,9 @@ func _offsetByIndex(bolt: BoltAttack, index: int):
 
 
 func _on_health_died():
+	call_deferred("reload_scene")
+
+# temp
+func reload_scene():
 	print("You lose!")
 	get_tree().reload_current_scene()

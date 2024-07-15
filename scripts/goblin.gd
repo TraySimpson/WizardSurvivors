@@ -27,6 +27,9 @@ func _physics_process(delta):
 	
 
 func _on_health_died():
+	call_deferred("spawnXp")
+	
+func spawnXp():
 	var xp = xp_drop.instantiate()
 	get_tree().current_scene.add_child(xp)
 	xp.position = position
@@ -51,10 +54,10 @@ func _on_area_entered(body):
 			return
 
 func _on_attack_cooldown_timeout():
-	can_attack = true
+	#can_attack = trues
 	if (is_attacking):
 		attack(attacked_target)
 
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	is_attacking = false
 	attacked_target = null

@@ -30,8 +30,8 @@ func healHealth(heal_points: int) -> void:
 
 func updateHealthBar() -> void:
 	$Timer.stop()
-	var ratio = float(current_health) / float(max_health)
-	var color = Color.LIME_GREEN
+	#var ratio = float(current_health) / float(max_health)
+	#var color = Color.LIME_GREEN
 # TODO fix so this isn't a global resource, currently all health bars update to the same color
 	#match(true):
 		#true when ratio > .5:

@@ -11,7 +11,7 @@ func _ready():
 	$CooldownTimer.wait_time = cooldown_time
 	$ProgressBar.max_value = cooldown_time
 
-func _process(delta):
+func _process(_delta):
 	$ProgressBar.value = cooldown_time - $CooldownTimer.time_left
 
 func _on_cooldown_timer_timeout():
