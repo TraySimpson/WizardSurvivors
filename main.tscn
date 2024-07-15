@@ -19,14 +19,15 @@ player_speed = 150
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 
-[node name="GoblinSpawnCooldown" type="Timer" parent="."]
-autostart = true
-
-[node name="GoblinSpawns" type="Path2D" parent="."]
+[node name="GoblinSpawns" type="Path2D" parent="Player"]
+position = Vector2(-960, -540)
 curve = SubResource("Curve2D_2yufk")
 
-[node name="GoblinSpawnPos" type="PathFollow2D" parent="GoblinSpawns"]
+[node name="GoblinSpawnPos" type="PathFollow2D" parent="Player/GoblinSpawns"]
 position = Vector2(-65, -80)
 rotation = -0.00144857
+
+[node name="GoblinSpawnCooldown" type="Timer" parent="."]
+autostart = true
 
 [connection signal="timeout" from="GoblinSpawnCooldown" to="." method="_on_goblin_spawn_cooldown_timeout"]

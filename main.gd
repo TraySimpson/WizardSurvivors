@@ -7,8 +7,7 @@ var spawn_pos: PathFollow2D = null
 
 
 func _ready():
-# TODO figure out spawn pos that moves with camera
-	spawn_pos = $Player/Camera2D/GoblinSpawns/GoblinSpawnPos
+	spawn_pos = $Player/GoblinSpawns/GoblinSpawnPos
 	spawnGoblin()
 	spawnGoblin()
 	spawnGoblin()
@@ -21,7 +20,7 @@ func spawnGoblin():
 	var goblin = goblin_prefab.instantiate()
 	goblin.setFollowTarget($Player)
 	add_child(goblin)
-	goblin.position = spawn_pos.position
+	goblin.position = spawn_pos.global_position
 
 func _on_goblin_spawn_cooldown_timeout():
 	spawnGoblins()

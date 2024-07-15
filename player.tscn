@@ -34,6 +34,7 @@ height = 48.0
 [node name="Player" type="Area2D"]
 collision_mask = 12
 script = ExtResource("1_7gwym")
+bullet_spread = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 10
