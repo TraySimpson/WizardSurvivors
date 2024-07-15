@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://4wpfsol88co8" path="res://health.tscn" id="3_ayyj0"]
 [ext_resource type="PackedScene" uid="uid://bdj32gv8kpwpu" path="res://scripts/bolt_spawner.tscn" id="4_rlftv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wxt5e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4n5o"]
 atlas = ExtResource("1_tvxa1")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4pa4u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt1v0"]
 atlas = ExtResource("1_tvxa1")
 region = Rect2(16, 0, 16, 16)
 
@@ -17,10 +17,10 @@ region = Rect2(16, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wxt5e")
+"texture": SubResource("AtlasTexture_f4n5o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4pa4u")
+"texture": SubResource("AtlasTexture_lt1v0")
 }],
 "loop": true,
 "name": &"default",

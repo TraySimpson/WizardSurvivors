@@ -4,10 +4,14 @@ extends Node
 const goblin_prefab = preload("res://goblin.tscn")
 var spawn_pos: PathFollow2D = null
 
-func _ready():
-	$Goblin.setFollowTarget($Player)
-	spawn_pos = $GoblinSpawns/GoblinSpawnPos
 
+
+func _ready():
+# TODO figure out spawn pos that moves with camera
+	spawn_pos = $Player/Camera2D/GoblinSpawns/GoblinSpawnPos
+	spawnGoblin()
+	spawnGoblin()
+	spawnGoblin()
 
 func spawnGoblins():
 	spawnGoblin()

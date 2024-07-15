@@ -32,16 +32,17 @@ func updateHealthBar() -> void:
 	$Timer.stop()
 	var ratio = float(current_health) / float(max_health)
 	var color = Color.LIME_GREEN
-	match(true):
-		true when ratio > .5:
-			color = Color.LIME_GREEN
-		true when ratio > .2:
-			color = Color.YELLOW
-		true when current_health > 0:
-			color = Color.CRIMSON
-		_ :
-			color = Color.BLACK
-	health_bar.get("theme_override_styles/fill").bg_color = color
+# TODO fix so this isn't a global resource, currently all health bars update to the same color
+	#match(true):
+		#true when ratio > .5:
+			#color = Color.LIME_GREEN
+		#true when ratio > .2:
+			#color = Color.YELLOW
+		#true when current_health > 0:
+			#color = Color.CRIMSON
+		#_ :
+			#color = Color.BLACK
+	#health_bar.get("theme_override_styles/fill").bg_color = color
 	health_bar.value = current_health
 	health_bar.show()
 	if (current_health == max_health):
