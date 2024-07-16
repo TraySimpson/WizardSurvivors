@@ -7,7 +7,8 @@ extends Node2D
 @onready var line_2d = $Line2D
 var hit_bodies = []
 
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	line_2d.clear_points()
 	line_2d.add_point(Vector2.ZERO)
@@ -22,6 +23,7 @@ func spawnLightning():
 	line_2d.add_point(Vector2.ZERO)
 	hit_bodies = []
 	getLightningPoint(Vector2.ZERO, 0)
+	shapecast.position = Vector2.ZERO
 
 func getLightningPoint(point: Vector2, hit_count: int) -> void:
 	if (hit_count >= max_targets):

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdt6vnktidu4q"]
 
-[ext_resource type="Script" path="res://fireball_attack.gd" id="1_aq1fg"]
-[ext_resource type="Texture2D" uid="uid://bayqd171tquon" path="res://graphics/Basic Attack.png" id="1_ckip5"]
+[ext_resource type="Script" path="res://scripts/fireball_attack.gd" id="1_8fuyf"]
+[ext_resource type="Texture2D" uid="uid://bayqd171tquon" path="res://graphics/Basic Attack.png" id="2_fqs1b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a11si"]
-atlas = ExtResource("1_ckip5")
+atlas = ExtResource("2_fqs1b")
 region = Rect2(16, 0, 8, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0idxe"]
@@ -24,7 +24,7 @@ radius = 20.025
 [node name="FireballAttack" type="Area2D"]
 collision_layer = 2
 collision_mask = 12
-script = ExtResource("1_aq1fg")
+script = ExtResource("1_8fuyf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)

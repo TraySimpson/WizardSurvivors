@@ -1,22 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://cbb5hyaentdth"]
 
-[ext_resource type="Script" path="res://bolt-attack.gd" id="1_tjgsb"]
-[ext_resource type="Texture2D" uid="uid://bayqd171tquon" path="res://graphics/Basic Attack.png" id="2_jusid"]
+[ext_resource type="Script" path="res://scripts/bolt-attack.gd" id="1_o86ox"]
+[ext_resource type="Texture2D" uid="uid://bayqd171tquon" path="res://graphics/Basic Attack.png" id="2_madvx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f0ylq"]
-atlas = ExtResource("2_jusid")
+atlas = ExtResource("2_madvx")
 region = Rect2(0, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_04ple"]
-atlas = ExtResource("2_jusid")
+atlas = ExtResource("2_madvx")
 region = Rect2(8, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3c81"]
-atlas = ExtResource("2_jusid")
+atlas = ExtResource("2_madvx")
 region = Rect2(16, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_excfd"]
-atlas = ExtResource("2_jusid")
+atlas = ExtResource("2_madvx")
 region = Rect2(24, 0, 8, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wnud0"]
@@ -45,7 +45,7 @@ radius = 16.0312
 [node name="BoltAttack" type="Area2D"]
 collision_layer = 2
 collision_mask = 12
-script = ExtResource("1_tjgsb")
+script = ExtResource("1_o86ox")
 impact_damage = 5
 bullet_speed = 500
 
