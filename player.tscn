@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cehhat6c7ev31"]
+[gd_scene load_steps=10 format=3 uid="uid://cehhat6c7ev31"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7gwym"]
 [ext_resource type="Texture2D" uid="uid://xhvl2px57hx0" path="res://graphics/Wizard.png" id="1_tvxa1"]
 [ext_resource type="PackedScene" uid="uid://4wpfsol88co8" path="res://health.tscn" id="3_ayyj0"]
 [ext_resource type="PackedScene" uid="uid://bdj32gv8kpwpu" path="res://scripts/bolt_spawner.tscn" id="4_rlftv"]
+[ext_resource type="PackedScene" uid="uid://bdt6vnktidu4q" path="res://fireball_attack.tscn" id="5_08fef"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4n5o"]
 atlas = ExtResource("1_tvxa1")
@@ -55,6 +56,9 @@ max_health = 100
 [node name="BoltSpawner" parent="." instance=ExtResource("4_rlftv")]
 position = Vector2(0, 47.72)
 bolt_count = 3
+
+[node name="FireballAttack" parent="." instance=ExtResource("5_08fef")]
+size_radius = 120.0
 
 [connection signal="died" from="Health" to="." method="_on_health_died"]
 [connection signal="bolt_spawned" from="BoltSpawner" to="." method="_on_bolt_spawner_bolt_spawned"]
