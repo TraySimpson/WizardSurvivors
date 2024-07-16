@@ -14,7 +14,6 @@ width = 8.0
 default_color = Color(0.2, 1, 1, 1)
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="."]
 shape = SubResource("CircleShape2D_ed6sr")
