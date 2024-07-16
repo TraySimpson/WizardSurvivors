@@ -28,6 +28,7 @@ position = Vector2(-65, -80)
 rotation = -0.00144857
 
 [node name="GoblinSpawnCooldown" type="Timer" parent="."]
+wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="GoblinSpawnCooldown" to="." method="_on_goblin_spawn_cooldown_timeout"]
