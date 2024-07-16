@@ -1,42 +1,42 @@
-extends Node2D
+extends Area2D
 
 
-@export var max_targets: int = 5
-@export var damage: int = 5
-@onready var shapecast: ShapeCast2D = $ShapeCast2D
+@export var max_targets: int = 15
+@export var damage: int = 20
+@export var radius: int = 300
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var line_2d = $Line2D
 var hit_bodies = []
+var lightning_ready: bool = true
 
 
 
 func _ready():
-	line_2d.clear_points()
-	line_2d.add_point(Vector2.ZERO)
-	line_2d.add_point(Vector2(100, 100))
-	
-func _process(delta):
-	pass
+	collision_shape.shape.radius = radius
 
+func _physics_process(delta):
+	if (not lightning_ready):
+		return
+	spawnLightning()
+	lightning_ready = false
 
 func spawnLightning():
 	line_2d.clear_points()
 	line_2d.add_point(Vector2.ZERO)
 	hit_bodies = []
 	getLightningPoint(Vector2.ZERO, 0)
-	shapecast.position = Vector2.ZERO
+	collision_shape.position = Vector2.ZERO
 
 func getLightningPoint(point: Vector2, hit_count: int) -> void:
 	if (hit_count >= max_targets):
 		return
-	shapecast.position = point
-	var collidedCount = shapecast.get_collision_count()
-	if (collidedCount == 0):
+	collision_shape.position = point
+	var collisions = get_overlapping_areas()
+	if (get_overlapping_areas().size() == 0):
 		return
-	print("Hit with lightning: " + str(collidedCount) + " on recursive layer: " + str(hit_count))
-	var closest_target: Area2D = shapecast.get_collider(0)
+	var closest_target: Area2D = collisions.pop_front()
 	var closest_distance: float = INF
-	for index in range(1, collidedCount):
-		var area = shapecast.get_collider(index)
+	for area in collisions:
 		var distance: float = to_local(area.global_position).distance_squared_to(point)
 		if (distance < closest_distance && not hit_bodies.has(area)):
 			closest_distance = distance
@@ -55,4 +55,4 @@ func hitWithLightning(target: Area2D):
 			return
 
 func _on_timer_timeout():
-	spawnLightning()
+	lightning_ready = true

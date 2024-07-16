@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/lightning_attack.gd" id="1_upw1s"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ed6sr"]
-radius = 250.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwhw8"]
 
-[node name="LightningAttack" type="Node2D"]
+[node name="LightningAttack" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_upw1s")
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -15,11 +16,7 @@ default_color = Color(0.2, 1, 1, 1)
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
-shape = SubResource("CircleShape2D_ed6sr")
-target_position = Vector2(0, 0)
-collision_mask = 4
-collide_with_areas = true
-collide_with_bodies = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pwhw8")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
