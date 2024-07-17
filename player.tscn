@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cehhat6c7ev31"]
+[gd_scene load_steps=11 format=3 uid="uid://cehhat6c7ev31"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7gwym"]
 [ext_resource type="Texture2D" uid="uid://xhvl2px57hx0" path="res://graphics/Wizard.png" id="1_tvxa1"]
 [ext_resource type="PackedScene" uid="uid://4wpfsol88co8" path="res://health.tscn" id="3_ayyj0"]
 [ext_resource type="PackedScene" uid="uid://bh6t8f10fh5yb" path="res://attacks/lightning_attack.tscn" id="4_18ktv"]
+[ext_resource type="PackedScene" uid="uid://bkmkyckwsa8wj" path="res://attacks/radiant_attack.tscn" id="6_llw7v"]
+[ext_resource type="PackedScene" uid="uid://bdt6vnktidu4q" path="res://attacks/fireball_attack.tscn" id="7_fyci2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4n5o"]
 atlas = ExtResource("1_tvxa1")
@@ -53,5 +55,14 @@ position = Vector2(0, 58.565)
 max_health = 100
 
 [node name="LightningAttack" parent="." instance=ExtResource("4_18ktv")]
+damage = 15
+radius = 200
+
+[node name="RadiantAttack" parent="." instance=ExtResource("6_llw7v")]
+cooldown_time = 0.25
+
+[node name="FireballAttack" parent="." instance=ExtResource("7_fyci2")]
+damage = 10
+max_hits_before_cooldown = 50
 
 [connection signal="died" from="Health" to="." method="_on_health_died"]

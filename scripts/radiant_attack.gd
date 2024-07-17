@@ -14,7 +14,6 @@ func _ready():
 
 func _on_timer_timeout():
 	var hitCount: int = shape_cast.get_collision_count()
-	print("Hit: " + str(hitCount))
 	for hitIndex in range(hitCount):
 		var hit = shape_cast.get_collider(hitIndex)
 		applyDamage(hit)

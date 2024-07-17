@@ -5,6 +5,7 @@ extends Area2D
 @export var attack_damage: int = 10
 @export var attack_cooldown: float = .25
 @export var move_speed: int = 50
+@export var xp_amount: int = 10
 const xp_drop = preload("res://xp.tscn")
 var can_attack: bool = true
 var is_attacking: bool = false
@@ -30,7 +31,8 @@ func _on_health_died():
 	call_deferred("spawnXp")
 	
 func spawnXp():
-	var xp = xp_drop.instantiate()
+	var xp: Xp = xp_drop.instantiate()
+	xp.xp = xp_amount
 	get_tree().current_scene.add_child(xp)
 	xp.position = position
 	queue_free()

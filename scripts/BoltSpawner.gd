@@ -4,7 +4,7 @@ signal bolt_spawned(BoltAttack, int)
 
 @export var bolt_attack_prefab: PackedScene = null
 @export var bolt_count: int = 1
-@export var cooldown_time: int = 1
+@export var cooldown_time: float = 1.0
 
 
 func _ready():

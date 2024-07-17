@@ -4,7 +4,7 @@
 - [ ] Burned
 - [ ] Bolted
 - [ ] Radiant
-- [ ] Add XP recorder singleton with level progression
+- [X] Add XP recorder singleton with level progression
 - [ ] Add UI for selecting upgrades that shows each level up
 - [ ] Rework XP sprite
 - [ ] Design upgrade framework... (plan out all upgrades, plan around that?)
@@ -12,3 +12,4 @@
 - [ ] Add pickup item that instantly levels up
 - [ ] Add pickup item that heals to full health
 - [ ] Add score count for enemies defeated
+- [ ] Use signal instantiation on fireball & lightning
