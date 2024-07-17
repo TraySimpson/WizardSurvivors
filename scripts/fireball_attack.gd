@@ -10,7 +10,7 @@ var current_hits: int = 0
 var is_cooling_down: bool = false
 
 @onready var collision_shape = $CollisionShape2D
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite = $Sprite2D
 @onready var cooldown_timer = $CooldownTimer
 
 

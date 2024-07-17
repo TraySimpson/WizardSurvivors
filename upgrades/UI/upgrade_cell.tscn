@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://ydkw5stjyveg"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_14ww5"]
+[ext_resource type="Resource" uid="uid://skuiqrd7sbob" path="res://upgrades/fireball-01.tres" id="2_023pi"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lxrn6"]
+
+[node name="UpgradeCell" type="Button"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_14ww5")
+upgrade = ExtResource("2_023pi")
+
+[node name="PrimaryIcon" type="Sprite2D" parent="."]
+position = Vector2(200, 200)
+scale = Vector2(5, 5)
+texture = SubResource("PlaceholderTexture2D_lxrn6")
+
+[node name="Secondary Icon" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+scale = Vector2(5, 5)
+texture = SubResource("PlaceholderTexture2D_lxrn6")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 15.0
+offset_right = 200.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "KASLKAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -165.0
+offset_right = 175.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "asdasd asd s a s"

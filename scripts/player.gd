@@ -39,9 +39,7 @@ func _offsetByIndex(bolt: BoltAttack, index: int):
 
 
 func _on_health_died():
-	call_deferred("reload_scene")
-
-# temp
-func reload_scene():
+	# temp add actual lose UI/restart logic
 	print("You lose!")
 	get_tree().reload_current_scene()
+	

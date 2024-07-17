@@ -1,22 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdt6vnktidu4q"]
+[gd_scene load_steps=4 format=3 uid="uid://bdt6vnktidu4q"]
 
 [ext_resource type="Script" path="res://scripts/fireball_attack.gd" id="1_8fuyf"]
 [ext_resource type="Texture2D" uid="uid://bayqd171tquon" path="res://graphics/Basic Attack.png" id="2_fqs1b"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a11si"]
-atlas = ExtResource("2_fqs1b")
-region = Rect2(16, 0, 8, 8)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0idxe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a11si")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wo87p"]
 radius = 20.025
@@ -26,14 +11,16 @@ collision_layer = 2
 collision_mask = 12
 script = ExtResource("1_8fuyf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_0idxe")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wo87p")
 
 [node name="CooldownTimer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_fqs1b")
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
 
 [connection signal="area_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
