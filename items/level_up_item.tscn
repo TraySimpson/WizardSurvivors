@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b72x6dh41u4t"]
+
+[ext_resource type="Script" path="res://items/level_up_item.gd" id="1_hr30w"]
+[ext_resource type="Texture2D" uid="uid://b05h26n1ylb08" path="res://graphics/pickups.png" id="2_68loe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b2h2e"]
+radius = 28.0
+
+[node name="LevelUpItem" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_hr30w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_68loe")
+region_enabled = true
+region_rect = Rect2(8, 0, 8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_b2h2e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

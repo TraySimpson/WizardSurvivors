@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ch25l711gsqe"]
+[gd_scene load_steps=8 format=3 uid="uid://ch25l711gsqe"]
 
 [ext_resource type="PackedScene" uid="uid://cehhat6c7ev31" path="res://player.tscn" id="1_8p14u"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ydouk"]
 [ext_resource type="PackedScene" uid="uid://ctqpp6m6vy21d" path="res://upgrade_system.tscn" id="3_gkkt6"]
 [ext_resource type="PackedScene" uid="uid://djunr530jopyg" path="res://items/health_item.tscn" id="4_cdmq6"]
 [ext_resource type="PackedScene" uid="uid://l8cjvh48840i" path="res://items/nuke_item.tscn" id="5_jjjak"]
+[ext_resource type="PackedScene" uid="uid://b72x6dh41u4t" path="res://items/level_up_item.tscn" id="6_v6tvh"]
 
 [sub_resource type="Curve2D" id="Curve2D_2yufk"]
 _data = {
@@ -42,5 +43,8 @@ position = Vector2(938, 947)
 
 [node name="NukeItem" parent="." instance=ExtResource("5_jjjak")]
 position = Vector2(587, 962)
+
+[node name="LevelUpItem" parent="." instance=ExtResource("6_v6tvh")]
+position = Vector2(1235, 971)
 
 [connection signal="timeout" from="GoblinSpawnCooldown" to="." method="_on_goblin_spawn_cooldown_timeout"]

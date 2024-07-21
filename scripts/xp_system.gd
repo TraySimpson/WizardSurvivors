@@ -11,10 +11,13 @@ var multiplier_for_xp_level: float = 1.5
 func addXp(xp: int):
 	current_xp += xp
 	while (current_xp >= xp_for_next_level):
-		current_level += 1
-		current_xp = current_xp - xp_for_next_level
-		xp_for_next_level = int(xp_for_next_level * multiplier_for_xp_level)
-		leveled_up.emit(current_level)
+		levelUp()
+
+func levelUp():
+	current_level += 1
+	current_xp = clamp(current_xp - xp_for_next_level, 0, INF)
+	xp_for_next_level = int(xp_for_next_level * multiplier_for_xp_level)
+	leveled_up.emit(current_level)
 
 func restartXp():
 	setLevel(1)
