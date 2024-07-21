@@ -11,7 +11,7 @@ var appliedUpgrades: Array[UpgradeBase] = []
 
 func _ready():
 	XpSystem.leveled_up.connect(handleLevelUp)
-	#loadUpgrades()
+	loadUpgrades()
 	ui.hide()
 	
 func loadUpgrades():

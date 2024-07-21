@@ -12,6 +12,6 @@ damage_increase = 5
 damage_percent_increase = 0
 name = "Hotter Fuel"
 description = "Fireball attack deals 5 more damage"
-prerequesites = [ExtResource("1_iwcow")]
+prerequesites = Array[Resource("res://scripts/upgrade_base.gd")]([ExtResource("1_iwcow")])
 primary_icon = ExtResource("2_unws3")
 secondary_icon = ExtResource("4_tpqv2")
