@@ -6,3 +6,6 @@ extends Resource
 @export var prerequesites = []
 @export var primary_icon: AtlasTexture = null
 @export var secondary_icon: AtlasTexture = null
+
+func _apply(player: Player):
+	pass

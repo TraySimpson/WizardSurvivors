@@ -8,9 +8,7 @@ var spawn_pos: PathFollow2D = null
 
 func _ready():
 	spawn_pos = $Player/GoblinSpawns/GoblinSpawnPos
-	spawnGoblin()
-	spawnGoblin()
-	spawnGoblin()
+	$UpgradeSystem.player = $Player
 
 func spawnGoblins():
 	spawnGoblin()

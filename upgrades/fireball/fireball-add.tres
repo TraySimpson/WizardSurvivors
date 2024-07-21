@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="AddWeaponUpgrade" load_steps=6 format=3 uid="uid://de5u7px0adria"]
+
+[ext_resource type="Script" path="res://upgrades/add_weapon_upgrade.gd" id="1_75lfy"]
+[ext_resource type="Texture2D" uid="uid://csu248mbp6e6b" path="res://graphics/UpgradeIcons.png" id="1_ssdx1"]
+[ext_resource type="PackedScene" uid="uid://bdt6vnktidu4q" path="res://attacks/fireball_attack.tscn" id="3_oxmg5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phboc"]
+atlas = ExtResource("1_ssdx1")
+region = Rect2(191, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abvtl"]
+atlas = ExtResource("1_ssdx1")
+region = Rect2(337, 0, 14, 15)
+
+[resource]
+script = ExtResource("1_75lfy")
+weaponToAdd = ExtResource("3_oxmg5")
+positionOffset = Vector2(0, 0)
+name = "Fireball"
+description = "Spawn an orbiting fireball that deals medium damage to enemies"
+prerequesites = []
+primary_icon = SubResource("AtlasTexture_phboc")
+secondary_icon = SubResource("AtlasTexture_abvtl")

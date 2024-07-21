@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch25l711gsqe"]
+[gd_scene load_steps=5 format=3 uid="uid://ch25l711gsqe"]
 
 [ext_resource type="PackedScene" uid="uid://cehhat6c7ev31" path="res://player.tscn" id="1_8p14u"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ydouk"]
+[ext_resource type="PackedScene" uid="uid://ctqpp6m6vy21d" path="res://upgrades/upgrade_system.tscn" id="3_0lg8l"]
 
 [sub_resource type="Curve2D" id="Curve2D_2yufk"]
 _data = {
@@ -30,5 +31,7 @@ rotation = -0.00144857
 [node name="GoblinSpawnCooldown" type="Timer" parent="."]
 wait_time = 0.05
 autostart = true
+
+[node name="UpgradeSystem" parent="." instance=ExtResource("3_0lg8l")]
 
 [connection signal="timeout" from="GoblinSpawnCooldown" to="." method="_on_goblin_spawn_cooldown_timeout"]
