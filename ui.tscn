@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://lhi6718avc3w"]
+
+[ext_resource type="Script" path="res://xp_bar.gd" id="1_84e2d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17eo6"]
+bg_color = Color(0.529407, 0.938062, 0.455722, 1)
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = 25.0
+offset_right = 500.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_17eo6")
+max_value = 1.0
+show_percentage = false
+script = ExtResource("1_84e2d")

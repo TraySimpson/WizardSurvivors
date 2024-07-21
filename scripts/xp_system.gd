@@ -1,6 +1,7 @@
 extends Node
 
 signal leveled_up(level: int)
+signal xp_changed(ratio: float)
 
 const FIRST_LEVEL_XP_AMOUNT = 100
 var current_xp: int = 0
@@ -12,6 +13,7 @@ func addXp(xp: int):
 	current_xp += xp
 	while (current_xp >= xp_for_next_level):
 		levelUp()
+	xp_changed.emit(float(current_xp) / float(xp_for_next_level))
 
 func levelUp():
 	current_level += 1

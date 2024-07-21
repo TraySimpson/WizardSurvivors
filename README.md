@@ -1,5 +1,5 @@
 ### To Do
-- [ ] Add lightning/radiant range visualization
+- [X] Add lightning/radiant range visualization
 - [ ] Add damaged animations for 
 - [ ] Burned
 - [ ] Bolted
@@ -8,9 +8,9 @@
 - [X] Add UI for selecting upgrades that shows each level up
 - [X] Rework XP sprite
 - [X] Design upgrade framework... (plan out all upgrades, plan around that?)
-- [ ] Add pickup item that nukes all enemies
-- [ ] Add pickup item that instantly levels up
-- [ ] Add pickup item that heals to full health
+- [X] Add pickup item that nukes all enemies
+- [X] Add pickup item that instantly levels up
+- [X] Add pickup item that heals to full health
 - [ ] Add score count for enemies defeated
 - [ ] Use signal instantiation on fireball, lightning, and bolt
 - [ ] Add XP bar
