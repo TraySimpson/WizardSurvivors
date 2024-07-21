@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="IncreaseHealthUpgrade" load_steps=2 format=3 uid="uid://cjvqr8uaqgnj"]
+[gd_resource type="Resource" script_class="IncreaseHealthUpgrade" load_steps=4 format=3 uid="uid://cjvqr8uaqgnj"]
 
 [ext_resource type="Script" path="res://scripts/upgrades/increase_health_upgrade.gd" id="1_5wt1j"]
+[ext_resource type="Texture2D" uid="uid://cxv6mm10osh5h" path="res://graphics/sliced/health.tres" id="1_x68gj"]
+[ext_resource type="Texture2D" uid="uid://di1jvynxjownh" path="res://graphics/sliced/icons/blue.tres" id="3_7su5q"]
 
 [resource]
 script = ExtResource("1_5wt1j")
 new_health = 100
-name = ""
-description = ""
+name = "Mage Armor"
+description = "Increases max health to 100"
 prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([])
+primary_icon = ExtResource("1_x68gj")
+secondary_icon = ExtResource("3_7su5q")

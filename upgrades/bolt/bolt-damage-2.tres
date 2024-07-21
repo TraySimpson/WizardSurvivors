@@ -8,7 +8,7 @@
 [resource]
 script = ExtResource("2_2kvro")
 weapon_name = "BoltSpawner"
-damage_increase = 5
+damage_increase = 10
 damage_percent_increase = 0
 name = "Master Casting"
 description = "Bolt attack deals 10 more damage"
