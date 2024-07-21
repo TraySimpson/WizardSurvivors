@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IncreaseHealthUpgrade" load_steps=5 format=3 uid="uid://f44y66abgubr"]
+
+[ext_resource type="Resource" uid="uid://cjvqr8uaqgnj" path="res://upgrades/health/health-1.tres" id="1_uryay"]
+[ext_resource type="Texture2D" uid="uid://cxv6mm10osh5h" path="res://graphics/sliced/health.tres" id="1_yvm6b"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_health_upgrade.gd" id="2_xundb"]
+[ext_resource type="Texture2D" uid="uid://di1jvynxjownh" path="res://graphics/sliced/icons/blue.tres" id="3_wmn88"]
+
+[resource]
+script = ExtResource("2_xundb")
+new_health = 200
+name = "Enchanted Chainmail"
+description = "Increases max health to 200"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_uryay")])
+primary_icon = ExtResource("1_yvm6b")
+secondary_icon = ExtResource("3_wmn88")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=5 format=3 uid="uid://bv8nhlrsust5p"]
+
+[ext_resource type="Resource" uid="uid://cqj7rpgfv0l63" path="res://upgrades/bolt/bolt-damage-1.tres" id="1_tqx4e"]
+[ext_resource type="Texture2D" uid="uid://dkoqrobkdf1ft" path="res://graphics/sliced/bolt.tres" id="1_utsun"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_damage_upgrade.gd" id="2_2kvro"]
+[ext_resource type="Texture2D" uid="uid://c7db5duuoyq1l" path="res://graphics/sliced/icons/attack.tres" id="3_goiio"]
+
+[resource]
+script = ExtResource("2_2kvro")
+weapon_name = "BoltSpawner"
+damage_increase = 5
+damage_percent_increase = 0
+name = "Master Casting"
+description = "Bolt attack deals 10 more damage"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_tqx4e")])
+primary_icon = ExtResource("1_utsun")
+secondary_icon = ExtResource("3_goiio")

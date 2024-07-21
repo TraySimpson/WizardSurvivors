@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://ydkw5stjyveg"]
 
-[ext_resource type="Script" path="res://scripts/upgrade-cell.gd" id="1_nmsoy"]
+[ext_resource type="Script" path="res://scripts/upgrades/upgrade-cell.gd" id="1_nmsoy"]
 [ext_resource type="Texture2D" uid="uid://csu248mbp6e6b" path="res://graphics/UpgradeIcons.png" id="2_g30nk"]
-[ext_resource type="Script" path="res://scripts/upgrade_base.gd" id="3_efwv8"]
+[ext_resource type="Script" path="res://scripts/upgrades/upgrade_base.gd" id="3_efwv8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxd17"]
 atlas = ExtResource("2_g30nk")

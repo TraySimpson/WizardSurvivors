@@ -28,6 +28,10 @@ func healHealth(heal_points: int) -> void:
 	health_changed.emit(heal_points)
 	updateHealthBar()
 
+func increaseMaxHealth(new_health: int) -> void:
+	max_health = new_health
+	healHealth(new_health)
+
 func updateHealthBar() -> void:
 	$Timer.stop()
 	#var ratio = float(current_health) / float(max_health)

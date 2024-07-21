@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=5 format=3 uid="uid://dthknsejmdbc8"]
 
-[ext_resource type="Script" path="res://scripts/increase_damage_upgrade.gd" id="1_jl5hy"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_damage_upgrade.gd" id="1_jl5hy"]
 [ext_resource type="Resource" uid="uid://cmtqjp1y7lwqi" path="res://upgrades/lightning/lightning-add.tres" id="1_tumaa"]
 [ext_resource type="Texture2D" uid="uid://cb05v0tigqa0g" path="res://graphics/sliced/lightning.tres" id="2_e82vj"]
 [ext_resource type="Texture2D" uid="uid://c7db5duuoyq1l" path="res://graphics/sliced/icons/attack.tres" id="4_6rm57"]

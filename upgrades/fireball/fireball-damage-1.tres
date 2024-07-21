@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=5 format=3 uid="uid://d4cdd7s7bmiwn"]
 
 [ext_resource type="Resource" uid="uid://de5u7px0adria" path="res://upgrades/fireball/fireball-add.tres" id="1_iwcow"]
-[ext_resource type="Script" path="res://scripts/increase_damage_upgrade.gd" id="1_ox1qt"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_damage_upgrade.gd" id="1_ox1qt"]
 [ext_resource type="Texture2D" uid="uid://clxoommmijue6" path="res://graphics/sliced/fireball.tres" id="2_unws3"]
 [ext_resource type="Texture2D" uid="uid://c7db5duuoyq1l" path="res://graphics/sliced/icons/attack.tres" id="4_tpqv2"]
 

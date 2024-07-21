@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=5 format=3 uid="uid://d4hie8mkeu27y"]
+
+[ext_resource type="Script" path="res://scripts/upgrades/increase_damage_upgrade.gd" id="1_f6quh"]
+[ext_resource type="Resource" uid="uid://dmds0gep0lee4" path="res://upgrades/moonbeam/moonbeam-add.tres" id="1_gsgwk"]
+[ext_resource type="Texture2D" uid="uid://pdyyvnfte1v" path="res://graphics/sliced/radiant.tres" id="2_uawqu"]
+[ext_resource type="Texture2D" uid="uid://c7db5duuoyq1l" path="res://graphics/sliced/icons/attack.tres" id="4_s3a1s"]
+
+[resource]
+script = ExtResource("1_f6quh")
+weapon_name = "Moonbeam"
+damage_increase = 1
+damage_percent_increase = 0
+name = "Waxing Crescent"
+description = "Moonbeam attack deals 1 more damage"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_gsgwk")])
+primary_icon = ExtResource("2_uawqu")
+secondary_icon = ExtResource("4_s3a1s")

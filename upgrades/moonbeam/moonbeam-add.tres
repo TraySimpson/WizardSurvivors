@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AddWeaponUpgrade" load_steps=5 format=3 uid="uid://dmds0gep0lee4"]
+
+[ext_resource type="Texture2D" uid="uid://pdyyvnfte1v" path="res://graphics/sliced/radiant.tres" id="1_c7sfw"]
+[ext_resource type="Script" path="res://scripts/upgrades/add_weapon_upgrade.gd" id="1_ce8lq"]
+[ext_resource type="Texture2D" uid="uid://ebobehuvxva2" path="res://graphics/sliced/icons/unlock.tres" id="3_nms31"]
+[ext_resource type="PackedScene" uid="uid://bkmkyckwsa8wj" path="res://attacks/radiant_attack.tscn" id="4_17d5l"]
+
+[resource]
+script = ExtResource("1_ce8lq")
+weaponName = "Moonbeam"
+weaponToAdd = ExtResource("4_17d5l")
+positionOffset = Vector2(0, 0)
+name = "Moonbeam"
+description = "Summon a persistent moonbeam attack that deals low damage to nearby enemies"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([])
+primary_icon = ExtResource("1_c7sfw")
+secondary_icon = ExtResource("3_nms31")

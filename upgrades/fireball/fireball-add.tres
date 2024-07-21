@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AddWeaponUpgrade" load_steps=6 format=3 uid="uid://de5u7px0adria"]
 
-[ext_resource type="Script" path="res://scripts/add_weapon_upgrade.gd" id="1_75lfy"]
+[ext_resource type="Script" path="res://scripts/upgrades/add_weapon_upgrade.gd" id="1_75lfy"]
 [ext_resource type="Texture2D" uid="uid://csu248mbp6e6b" path="res://graphics/UpgradeIcons.png" id="1_ssdx1"]
 [ext_resource type="PackedScene" uid="uid://bdt6vnktidu4q" path="res://attacks/fireball_attack.tscn" id="3_oxmg5"]
 

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IncreaseHealthUpgrade" load_steps=5 format=3 uid="uid://biopnk3h2qhje"]
+
+[ext_resource type="Texture2D" uid="uid://cxv6mm10osh5h" path="res://graphics/sliced/health.tres" id="1_1wv1c"]
+[ext_resource type="Resource" uid="uid://f44y66abgubr" path="res://upgrades/health/health-2.tres" id="1_wricr"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_health_upgrade.gd" id="2_a6knw"]
+[ext_resource type="Texture2D" uid="uid://b7l07x7dqwqgp" path="res://graphics/sliced/icons/red.tres" id="4_x2y0b"]
+
+[resource]
+script = ExtResource("2_a6knw")
+new_health = 250
+name = "Silver Chestplate"
+description = "Increases max health to 250"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_wricr")])
+primary_icon = ExtResource("1_1wv1c")
+secondary_icon = ExtResource("4_x2y0b")

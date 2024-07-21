@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IncreaseHealthUpgrade" load_steps=5 format=3 uid="uid://cfc2e2wqx424a"]
+
+[ext_resource type="Texture2D" uid="uid://cxv6mm10osh5h" path="res://graphics/sliced/health.tres" id="1_7vq2y"]
+[ext_resource type="Resource" uid="uid://biopnk3h2qhje" path="res://upgrades/health/health-3.tres" id="1_cqg1i"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_health_upgrade.gd" id="2_gi26f"]
+[ext_resource type="Texture2D" uid="uid://b7l07x7dqwqgp" path="res://graphics/sliced/icons/red.tres" id="4_xoifv"]
+
+[resource]
+script = ExtResource("2_gi26f")
+new_health = 300
+name = "Blacksmithed Veil"
+description = "Increases max health to 300"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_cqg1i")])
+primary_icon = ExtResource("1_7vq2y")
+secondary_icon = ExtResource("4_xoifv")

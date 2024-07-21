@@ -2,7 +2,7 @@ class_name BoltAttack
 extends Area2D
 
 
-@export var impact_damage: int  = 50
+@export var damage: int  = 50
 @export var bullet_speed: int = 200
 @export var direction: Vector2 = Vector2(1,1)
 @export var max_penetrated_bodies: int = 1
@@ -18,7 +18,7 @@ func _on_body_entered(body):
 		return
 	for child in body.get_children():
 		if child is Health:
-			child.takeDamage(impact_damage)
+			child.takeDamage(damage)
 			increaseBodiesHit()
 			return
 

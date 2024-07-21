@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IncreaseHealthUpgrade" load_steps=5 format=3 uid="uid://cww72136c1k27"]
+
+[ext_resource type="Texture2D" uid="uid://cxv6mm10osh5h" path="res://graphics/sliced/health.tres" id="1_7s8xa"]
+[ext_resource type="Resource" uid="uid://cfc2e2wqx424a" path="res://upgrades/health/health-4.tres" id="1_ejmt7"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_health_upgrade.gd" id="2_721pl"]
+[ext_resource type="Texture2D" uid="uid://cqvs4f6cguq7q" path="res://graphics/sliced/icons/yellow.tres" id="4_50pdk"]
+
+[resource]
+script = ExtResource("2_721pl")
+new_health = 350
+name = "Divine Shield"
+description = "Increases max health to 350"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_ejmt7")])
+primary_icon = ExtResource("1_7s8xa")
+secondary_icon = ExtResource("4_50pdk")

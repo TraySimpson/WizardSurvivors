@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=5 format=3 uid="uid://b560jehfnml4i"]
+
+[ext_resource type="Resource" uid="uid://d4hie8mkeu27y" path="res://upgrades/moonbeam/moonbeam-damage-1.tres" id="1_xobbc"]
+[ext_resource type="Texture2D" uid="uid://pdyyvnfte1v" path="res://graphics/sliced/radiant.tres" id="2_tbq5y"]
+[ext_resource type="Script" path="res://scripts/upgrades/increase_damage_upgrade.gd" id="3_klv07"]
+[ext_resource type="Texture2D" uid="uid://c7db5duuoyq1l" path="res://graphics/sliced/icons/attack.tres" id="4_nm2ob"]
+
+[resource]
+script = ExtResource("3_klv07")
+weapon_name = "Moonbeam"
+damage_increase = 2
+damage_percent_increase = 0
+name = "Full Moon"
+description = "Moonbeam attack deals 2 more damage"
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_xobbc")])
+primary_icon = ExtResource("2_tbq5y")
+secondary_icon = ExtResource("4_nm2ob")

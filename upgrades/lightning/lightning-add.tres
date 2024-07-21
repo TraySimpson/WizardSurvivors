@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AddWeaponUpgrade" load_steps=5 format=3 uid="uid://cmtqjp1y7lwqi"]
 
-[ext_resource type="Script" path="res://scripts/add_weapon_upgrade.gd" id="1_4o023"]
+[ext_resource type="Script" path="res://scripts/upgrades/add_weapon_upgrade.gd" id="1_4o023"]
 [ext_resource type="Texture2D" uid="uid://cb05v0tigqa0g" path="res://graphics/sliced/lightning.tres" id="1_vpyiu"]
 [ext_resource type="Texture2D" uid="uid://ebobehuvxva2" path="res://graphics/sliced/icons/unlock.tres" id="3_68kfo"]
 [ext_resource type="PackedScene" uid="uid://bh6t8f10fh5yb" path="res://attacks/lightning_attack.tscn" id="4_q3e2h"]
