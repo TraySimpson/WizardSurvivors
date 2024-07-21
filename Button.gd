@@ -1,3 +1,4 @@
+class_name UpgradeCell
 extends Button
 
 signal upgrade_selected(upgrade: UpgradeBase)
