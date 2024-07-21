@@ -12,6 +12,6 @@ weaponToAdd = ExtResource("4_q3e2h")
 positionOffset = Vector2(0, 0)
 name = "Chain Lightning"
 description = "A powerful lightning bolt strikes nearby enemies dealing high damage with a longer cooldown"
-prerequesites = Array[Resource("res://scripts/upgrade_base.gd")]([])
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([])
 primary_icon = ExtResource("1_vpyiu")
 secondary_icon = ExtResource("3_68kfo")

@@ -12,6 +12,6 @@ damage_increase = 10
 damage_percent_increase = 0
 name = "Deadly Static"
 description = "Lightning attack deals 10 more damage"
-prerequesites = Array[Resource("res://scripts/upgrade_base.gd")]([ExtResource("1_tumaa")])
+prerequesites = Array[Resource("res://scripts/upgrades/upgrade_base.gd")]([ExtResource("1_tumaa")])
 primary_icon = ExtResource("2_e82vj")
 secondary_icon = ExtResource("4_6rm57")
