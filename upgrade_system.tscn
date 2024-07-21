@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctqpp6m6vy21d"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_system.gd" id="1_ni5s7"]
-[ext_resource type="PackedScene" uid="uid://ydkw5stjyveg" path="res://upgrades/UI/upgrade_cell.tscn" id="2_4ihwf"]
+[ext_resource type="PackedScene" uid="uid://ydkw5stjyveg" path="res://UI/upgrade_cell.tscn" id="2_4ihwf"]
 
 [node name="UpgradeSystem" type="Node"]
 process_mode = 3

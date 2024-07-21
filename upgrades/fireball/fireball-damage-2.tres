@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=5 format=3 uid="uid://vd60uyrda0e5"]
+
+[ext_resource type="Resource" uid="uid://de5u7px0adria" path="res://upgrades/fireball/fireball-add.tres" id="1_jyfpm"]
+[ext_resource type="Texture2D" uid="uid://clxoommmijue6" path="res://graphics/sliced/fireball.tres" id="2_e7doc"]
+[ext_resource type="Script" path="res://scripts/increase_damage_upgrade.gd" id="3_03jhu"]
+[ext_resource type="Texture2D" uid="uid://c7db5duuoyq1l" path="res://graphics/sliced/icons/attack.tres" id="4_rape1"]
+
+[resource]
+script = ExtResource("3_03jhu")
+weapon_name = "Fireball"
+damage_increase = 10
+damage_percent_increase = 0
+name = "Incinerator"
+description = "Fireball attack deals 10 more damage"
+prerequesites = Array[Resource("res://upgrades/upgrade_base.gd")]([ExtResource("1_jyfpm")])
+primary_icon = ExtResource("2_e7doc")
+secondary_icon = ExtResource("4_rape1")

@@ -4,14 +4,41 @@ extends Node
 @export var player: Player = null
 
 @onready var ui: CanvasLayer = $UI
-@onready var available_upgrades = $AvailableUpgrades
+
 
 var appliedUpgrades: Array[UpgradeBase] = []
 
 
 func _ready():
 	XpSystem.leveled_up.connect(handleLevelUp)
+	#loadUpgrades()
 	ui.hide()
+	
+func loadUpgrades():
+	all_upgrades = parse_directory_for_resources("res://upgrades")
+
+func parse_directory_for_resources(directory_path: String) -> Array[UpgradeBase]:
+	var resources: Array[UpgradeBase] = []
+	var dir = DirAccess.open(directory_path)
+	
+	if dir:
+		dir.list_dir_begin()  # Begin listing the directory with hidden files and directories
+		var file_name = dir.get_next()
+
+		while file_name != "":
+			var file_path = directory_path + "/" + file_name
+			if dir.current_is_dir():
+				if file_name != "." and file_name != "..":  # Skip the current and parent directory references
+					resources += parse_directory_for_resources(file_path)  # Recursively parse subdirectories
+			elif file_name.get_extension() == "tres":
+				var resource = ResourceLoader.load(file_path)
+				if resource:
+					resources.append(resource)
+			file_name = dir.get_next()
+
+		dir.list_dir_end()
+
+	return resources
 
 func handleLevelUp(_level):
 	get_tree().paused = true
@@ -19,11 +46,11 @@ func handleLevelUp(_level):
 
 func showUpgradeUI():
 	var upgrades = getAvailableUpgrades()
-	# TODO get random 3
 	var index := 0
 	if (upgrades.size() == 0):
 		get_tree().paused = false
 		return
+	upgrades.shuffle()
 	for upgradeCell in ui.get_children():
 		if (upgrades.size() > index):
 			upgradeCell.setUpgrade(upgrades[index])

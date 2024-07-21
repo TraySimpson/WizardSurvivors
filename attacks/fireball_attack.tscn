@@ -10,6 +10,7 @@ radius = 20.025
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("1_8fuyf")
+damage = 8
 cooldown_time = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

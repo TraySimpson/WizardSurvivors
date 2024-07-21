@@ -1,22 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://ydkw5stjyveg"]
 
-[ext_resource type="Script" path="res://Button.gd" id="1_14ww5"]
-[ext_resource type="Texture2D" uid="uid://csu248mbp6e6b" path="res://graphics/UpgradeIcons.png" id="2_sc3up"]
-[ext_resource type="Script" path="res://upgrades/upgrade_base.gd" id="3_nl1gi"]
+[ext_resource type="Script" path="res://scripts/upgrade-cell.gd" id="1_nmsoy"]
+[ext_resource type="Texture2D" uid="uid://csu248mbp6e6b" path="res://graphics/UpgradeIcons.png" id="2_g30nk"]
+[ext_resource type="Script" path="res://scripts/upgrade_base.gd" id="3_efwv8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxd17"]
-atlas = ExtResource("2_sc3up")
+atlas = ExtResource("2_g30nk")
 region = Rect2(194, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b25et"]
-atlas = ExtResource("2_sc3up")
+atlas = ExtResource("2_g30nk")
 region = Rect2(337, 0, 14, 15)
 
 [sub_resource type="Resource" id="Resource_2kcmh"]
-script = ExtResource("3_nl1gi")
+script = ExtResource("3_efwv8")
 name = "Fireball"
 description = "Spawn an orbiting fireball that damages enemies on impact"
-prerequesites = Array[ExtResource("3_nl1gi")]([])
+prerequesites = Array[ExtResource("3_efwv8")]([])
 primary_icon = SubResource("AtlasTexture_xxd17")
 secondary_icon = SubResource("AtlasTexture_b25et")
 
@@ -37,7 +37,7 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_14ww5")
+script = ExtResource("1_nmsoy")
 upgrade = SubResource("Resource_2kcmh")
 
 [node name="PrimaryIcon" type="TextureRect" parent="."]

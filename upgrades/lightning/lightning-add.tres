@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AddWeaponUpgrade" load_steps=5 format=3 uid="uid://cmtqjp1y7lwqi"]
+
+[ext_resource type="Script" path="res://scripts/add_weapon_upgrade.gd" id="1_4o023"]
+[ext_resource type="Texture2D" uid="uid://cb05v0tigqa0g" path="res://graphics/sliced/lightning.tres" id="1_vpyiu"]
+[ext_resource type="Texture2D" uid="uid://ebobehuvxva2" path="res://graphics/sliced/icons/unlock.tres" id="3_68kfo"]
+[ext_resource type="PackedScene" uid="uid://bh6t8f10fh5yb" path="res://attacks/lightning_attack.tscn" id="4_q3e2h"]
+
+[resource]
+script = ExtResource("1_4o023")
+weaponName = "Lightning"
+weaponToAdd = ExtResource("4_q3e2h")
+positionOffset = Vector2(0, 0)
+name = "Chain Lightning"
+description = "A powerful lightning bolt strikes nearby enemies dealing high damage with a longer cooldown"
+prerequesites = Array[Resource("res://upgrades/upgrade_base.gd")]([])
+primary_icon = ExtResource("1_vpyiu")
+secondary_icon = ExtResource("3_68kfo")
