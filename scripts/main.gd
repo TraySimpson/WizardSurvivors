@@ -15,6 +15,7 @@ func spawnGoblins():
 func spawnGoblin():
 	spawn_pos.progress_ratio = randf()
 	var goblin = goblin_prefab.instantiate()
+	goblin.add_to_group("enemies")
 	goblin.setFollowTarget($Player)
 	add_child(goblin)
 	goblin.position = spawn_pos.global_position

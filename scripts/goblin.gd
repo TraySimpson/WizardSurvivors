@@ -25,7 +25,10 @@ func _physics_process(delta):
 			animated_sprite.flip_h = false
 		elif (move_direction.x < 0):
 			animated_sprite.flip_h = true
-	
+
+func die():
+	spawnXp()
+	queue_free()
 
 func _on_health_died():
 	call_deferred("spawnXp")
