@@ -7,7 +7,7 @@ extends UpgradeBase
 
 func _apply(player: Player):
 	var weapon = player.get_node(weapon_name)
-	if (weapon != null):
+	if (weapon != null and "damage" in weapon):
 		weapon.damage = weapon.damage + damage_increase + (weapon.damage * damage_percent_increase)
 	else:
 		print("Weapon not found!")

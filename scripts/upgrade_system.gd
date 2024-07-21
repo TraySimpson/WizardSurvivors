@@ -11,6 +11,7 @@ var appliedUpgrades: Array[UpgradeBase] = []
 
 func _ready():
 	XpSystem.leveled_up.connect(handleLevelUp)
+	ui.hide()
 
 func handleLevelUp(_level):
 	get_tree().paused = true
@@ -20,12 +21,15 @@ func showUpgradeUI():
 	var upgrades = getAvailableUpgrades()
 	# TODO get random 3
 	var index := 0
+	if (upgrades.size() == 0):
+		get_tree().paused = false
+		return
 	for upgradeCell in ui.get_children():
 		if (upgrades.size() > index):
 			upgradeCell.setUpgrade(upgrades[index])
+			upgradeCell.show()
 		else:
 			upgradeCell.hide()
-		upgradeCell.show()
 		index += 1
 	ui.show()
 

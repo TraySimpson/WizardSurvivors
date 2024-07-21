@@ -16,7 +16,7 @@ region = Rect2(337, 0, 14, 15)
 script = ExtResource("3_nl1gi")
 name = "Fireball"
 description = "Spawn an orbiting fireball that damages enemies on impact"
-prerequesites = []
+prerequesites = Array[ExtResource("3_nl1gi")]([])
 primary_icon = SubResource("AtlasTexture_xxd17")
 secondary_icon = SubResource("AtlasTexture_b25et")
 

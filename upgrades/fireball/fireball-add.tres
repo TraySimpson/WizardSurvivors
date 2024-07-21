@@ -14,10 +14,11 @@ region = Rect2(337, 0, 14, 15)
 
 [resource]
 script = ExtResource("1_75lfy")
+weaponName = "Fireball"
 weaponToAdd = ExtResource("3_oxmg5")
 positionOffset = Vector2(0, 0)
 name = "Fireball"
 description = "Spawn an orbiting fireball that deals medium damage to enemies"
-prerequesites = []
+prerequesites = Array[Resource("res://upgrades/upgrade_base.gd")]([])
 primary_icon = SubResource("AtlasTexture_phboc")
 secondary_icon = SubResource("AtlasTexture_abvtl")
