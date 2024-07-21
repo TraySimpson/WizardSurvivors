@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="IncreaseDamageUpgrade" load_steps=3 format=3 uid="uid://d4cdd7s7bmiwn"]
+
+[ext_resource type="Resource" uid="uid://de5u7px0adria" path="res://upgrades/fireball/fireball-add.tres" id="1_iwcow"]
+[ext_resource type="Script" path="res://upgrades/increase_damage_upgrade.gd" id="1_ox1qt"]
+
+[resource]
+script = ExtResource("1_ox1qt")
+weapon_name = "Fireball"
+damage_increase = 20
+damage_percent_increase = 0
+name = "Hotter Fuel"
+description = "Fireball attack deals 20 more damage on impact"
+prerequesites = [ExtResource("1_iwcow")]
