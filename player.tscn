@@ -54,5 +54,7 @@ max_health = 100
 
 [node name="BoltSpawner" parent="." instance=ExtResource("4_x45ag")]
 position = Vector2(0, 50)
+bolt_count = 3
 
 [connection signal="died" from="Health" to="." method="_on_health_died"]
+[connection signal="bolt_spawned" from="BoltSpawner" to="." method="_on_bolt_spawner_bolt_spawned"]

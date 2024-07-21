@@ -46,6 +46,7 @@ radius = 16.0312
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("1_o86ox")
+damage = 5
 bullet_speed = 500
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

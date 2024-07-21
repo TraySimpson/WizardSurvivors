@@ -13,6 +13,7 @@ var lightning_ready: bool = true
 
 func _ready():
 	collision_shape.shape.radius = radius
+	spawnLightning()
 
 func _physics_process(delta):
 	if (not lightning_ready):
@@ -25,7 +26,9 @@ func spawnLightning():
 	line_2d.add_point(Vector2.ZERO)
 	hit_bodies = []
 	getLightningPoint(Vector2.ZERO, 0)
+	line_2d.show()
 	collision_shape.position = Vector2.ZERO
+	$FlashTimer.start()
 
 func getLightningPoint(point: Vector2, hit_count: int) -> void:
 	if (hit_count >= max_targets):
@@ -56,3 +59,7 @@ func hitWithLightning(target: Area2D):
 
 func _on_timer_timeout():
 	lightning_ready = true
+
+
+func _on_flash_timer_timeout():
+	line_2d.hide()
