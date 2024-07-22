@@ -16,6 +16,7 @@ func _ready():
 	
 func loadUpgrades():
 	all_upgrades = parse_directory_for_resources("res://upgrades")
+	print("Loaded " + str(all_upgrades.size()) + " upgrades")
 
 func parse_directory_for_resources(directory_path: String) -> Array[UpgradeBase]:
 	var resources: Array[UpgradeBase] = []
@@ -27,10 +28,15 @@ func parse_directory_for_resources(directory_path: String) -> Array[UpgradeBase]
 
 		while file_name != "":
 			var file_path = directory_path + "/" + file_name
+			# Dumb fix for exporting
+			print("Parsing: " + file_path)
+			if file_path.ends_with(".remap"):
+				file_path = file_path.replace(".remap", "")
+				print("Trimmed to: " + file_path)
 			if dir.current_is_dir():
 				if file_name != "." and file_name != "..":  # Skip the current and parent directory references
 					resources += parse_directory_for_resources(file_path)  # Recursively parse subdirectories
-			elif file_name.get_extension() == "tres":
+			elif file_name.ends_with("tres"):
 				var resource = ResourceLoader.load(file_path)
 				if resource:
 					resources.append(resource)

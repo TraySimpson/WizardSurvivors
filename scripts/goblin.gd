@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var attack_cooldown_timer = $AttackCooldown
 
 @export var attack_damage: int = 10
 @export var attack_cooldown: float = .25
@@ -47,7 +48,7 @@ func attack(target):
 	target.takeDamage(attack_damage)
 	can_attack = false
 	is_attacking = true
-	$AttackCooldown.start()
+	attack_cooldown_timer.start()
 
 func _on_area_entered(body):
 	if (not can_attack):

@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Wizard Survivors"
+config/version="1.0"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://graphics/Icon.png"
 
 [autoload]
 
@@ -23,6 +24,10 @@ XpSystem="*res://scripts/xp_system.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[editor]
+
+export/convert_text_resources_to_binary=false
 
 [input]
 
