@@ -40,7 +40,7 @@ func _offsetByIndex(bolt: BoltAttack, index: int):
 
 
 func _on_health_died():
-	# temp add actual lose UI/restart logic
 	print("You lose!")
+	XpSystem.restartXp()
 	get_tree().reload_current_scene()
 	

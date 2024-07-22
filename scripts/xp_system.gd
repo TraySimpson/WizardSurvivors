@@ -14,12 +14,14 @@ func addXp(xp: int):
 	while (current_xp >= xp_for_next_level):
 		levelUp()
 	xp_changed.emit(float(current_xp) / float(xp_for_next_level))
+	print("Added xp: " + str(xp))
 
 func levelUp():
 	current_level += 1
 	current_xp = clamp(current_xp - xp_for_next_level, 0, INF)
 	xp_for_next_level = int(xp_for_next_level * multiplier_for_xp_level)
 	leveled_up.emit(current_level)
+	print("Leveled up to " + str(current_level) + "! Next XP needed: " + str(xp_for_next_level))
 
 func restartXp():
 	setLevel(1)
